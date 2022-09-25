@@ -1,0 +1,47 @@
+package p1;
+
+public class incometax {
+	public static void main(String args[])
+	{
+		int MonthlySalary=25000;
+		int hra;
+		hra=(MonthlySalary/100)*20;
+		int da;
+		da=(MonthlySalary/100)*40+hra;
+		int ta=0;
+		int BasicSalary=(MonthlySalary/100)*40;
+
+		int AnnualSalary=MonthlySalary*12+hra+da+ta;
+		System.out.println("AnnualSalary="+AnnualSalary);
+		if(AnnualSalary>=500000)
+		{
+			ta=(BasicSalary/100)*10;
+			System.out.println("Trasport Tax:"+ta);
+		}
+		else if(AnnualSalary>=500000)
+		{
+		   System.out.println("No Tax");
+		}
+		else if(AnnualSalary>=500000&&AnnualSalary>=100000)
+		{
+			 int tax=(AnnualSalary/100)*10;
+			System.out.println("Taxableamount="+tax);
+		}
+		else if(AnnualSalary>=100000&&AnnualSalary>=200000)
+		{
+			 int tax=(AnnualSalary/100)*20;
+			System.out.println("Taxable amount="+tax);
+		}
+		else if(AnnualSalary>=2000000)
+		{
+			 int tax=(AnnualSalary/100)*30;
+			System.out.println("Taxable Amount="+tax);
+		}
+		
+		
+		int TaxableSalary=AnnualSalary-tax;
+		System.out.println("Taxable salary"+TaxableSalary);
+		
+	}
+
+}
